@@ -22,6 +22,11 @@ window.addEventListener("load", () => {
     postEl.append(friendEl);
 
     // 追加(start)
+
+    // ユーザー名を追加
+    const usernameEl = document.querySelector(".left-sidebar__username");
+    usernameEl.innerHTML = "コードネーム：" + localStorage.username;
+
     // タイムスタンプを追加
     const timestampEl = document.createElement("div");
     let createTime = "posted " + moment(bacefook.newsfeed[index]["timestamp"]).startOf("h:mm:ss").fromNow(); // "posted 5 hours ago"
