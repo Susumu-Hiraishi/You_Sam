@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+.hero-text {
+    background: rgba(255,255,255,.8);
+    /* position: fixed; */
+    width: 100%;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+
+.hero-text h1 {
+    margin: 10px;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+#newsfeed {
+    background: rgb(230, 233, 233);
+    padding-top: 10px;
+}
+
+#newsfeed > div {
+    margin: 0 auto;
+    height: 300px;
+    width: 500px;
+    background: rgba(190, 190, 187, 0.1);
+    margin-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
