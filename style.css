@@ -3,7 +3,8 @@ body {
 }
 
 .hero {
-    background: rgba(255,255,255,1);
+    background: rgb(65, 57, 57);
+    color: rgb(124, 129, 129);
     position: fixed;
     width: 100%;
     box-shadow: 0 1px 1px rgba(0,0,0,.5);
@@ -22,7 +23,7 @@ body {
 main {
     display: flex;
     justify-content: space-between;
-    background: rgba(133, 133, 128, 0.1);
+    background: rgba(185, 185, 128, 0.1);
     padding-top: 90px;
     font-size: 12px;
 }
@@ -34,7 +35,7 @@ ul {
 
 .newsfeed__post {
     position: relative;
-    background: #ffffff;
+    background: #665454;
     margin: 0 auto;
     height: 200px;
     width: 400px;
