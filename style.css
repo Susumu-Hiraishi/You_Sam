@@ -27,6 +27,11 @@ main {
     font-size: 12px;
 }
 
+ul {
+    list-style: none;
+    line-height: 30px;
+}
+
 .newsfeed__post {
     position: relative;
     background: #ffffff;

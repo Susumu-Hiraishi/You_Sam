@@ -57,7 +57,7 @@ window.addEventListener("load", () => {
 
   // ユーザー名を追加
   const usernameEl = document.querySelector(".left-sidebar__username");
-  usernameEl.innerHTML = "コードネーム：" + localStorage.username;
+  usernameEl.innerHTML = localStorage.username;
 });
 
 // ロード完了後にnewsfeedを監視
