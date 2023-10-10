@@ -98,7 +98,7 @@ watchArray(bacefook.newsfeed, function() {
   imageEl.height = 50;
   postEl.append(imageEl);
   
-  containerEl.append(postEl);
+  containerEl.prepend(postEl);
 
 });
 }

@@ -3,10 +3,13 @@ body {
 }
 
 .hero-text {
-    background: rgba(255,255,255,.8);
-    /* position: fixed; */
+    background: rgba(255,255,255,1);
+    position: fixed;
     width: 100%;
-    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    box-shadow: 0 1px 3px rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .hero-text h1 {
@@ -17,7 +20,7 @@ body {
 
 #newsfeed {
     background: rgb(230, 233, 233);
-    padding-top: 10px;
+    padding-top: 90px;
 }
 
 #newsfeed > div {
@@ -28,4 +31,7 @@ body {
     margin-bottom: 10px;
     text-align: center;
     box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    /* position: absolute;
+    top: 100;
+    left: 0; */
 }
