@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
 
     // タイムスタンプ（投稿日時）を追加
     const timestampEl = document.createElement("div");
-    timestampEl.classList.add("newsfeed__posted-date")
+    timestampEl.classList.add("newsfeed__posted-date");
     let createTime = "posted " + moment(bacefook.newsfeed[index]["timestamp"]).startOf("h:mm:ss").fromNow(); // "posted 5 hours ago"
     timestampEl.innerHTML = createTime;
     postEl.append(timestampEl);
@@ -47,7 +47,7 @@ window.addEventListener("load", () => {
 
     // 投稿メッセージを追加
     const postmessageEl = document.createElement("div");
-    postmessageEl.classList.add("newsfeed__message")
+    postmessageEl.classList.add("newsfeed__message");
     postmessageEl.innerText = post.text;
     postEl.append(postmessageEl);
 
@@ -67,6 +67,12 @@ window.addEventListener("load", () => {
     friendNameEl.classList.add("right-sidebar__item");
     friendNameEl.innerHTML = el;
     friendlistEl.append(friendNameEl);
+  });
+
+  // 新しい投稿を作成
+  const newpostBtn = document.querySelector("#hero__newpost-btn");
+  newpostBtn.addEventListener("click", function() {
+  window.prompt("create new post");
   });
 
 });
@@ -110,7 +116,7 @@ watchArray(bacefook.newsfeed, function() {
 
   // タイムスタンプ（投稿日時）を追加
   const timestampEl = document.createElement("div");
-  timestampEl.classList.add("newsfeed__posted-date")
+  timestampEl.classList.add("newsfeed__posted-date");
   let createTime = "posted " + moment(bacefook.newsfeed[lastIndex]["timestamp"]).startOf("h:mm:ss").fromNow(); // "posted 5 hours ago"
   timestampEl.innerHTML = createTime;
   postEl.append(timestampEl);
@@ -130,7 +136,7 @@ watchArray(bacefook.newsfeed, function() {
 
   // 投稿メッセージを追加
   const postmessageEl = document.createElement("div");
-  postmessageEl.classList.add("newsfeed__message")
+  postmessageEl.classList.add("newsfeed__message");
   postmessageEl.innerText = post.text;
   postEl.append(postmessageEl);
 
@@ -139,8 +145,3 @@ watchArray(bacefook.newsfeed, function() {
 
 });
 }
-
-
-
-
-
