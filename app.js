@@ -58,6 +58,17 @@ window.addEventListener("load", () => {
   // ユーザー名を追加
   const usernameEl = document.querySelector(".left-sidebar__username");
   usernameEl.innerHTML = localStorage.username;
+
+  // フレンドの表示
+  const friendlistEl = document.querySelector(".right-sidebar__list");
+  
+  bacefook.friendNames.forEach(el => {
+    const friendNameEl = document.createElement("li");
+    friendNameEl.classList.add("right-sidebar__item");
+    friendNameEl.innerHTML = el;
+    friendlistEl.append(friendNameEl);
+  });
+
 });
 
 // ロード完了後にnewsfeedを監視
