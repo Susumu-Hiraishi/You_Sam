@@ -11,47 +11,56 @@ window.addEventListener("load", () => {
 
   // This makes things appear
   for (let index = bacefook.newsfeed.length - 1; index >= 0; index--) {
+
+    // 投稿のフレームを作成
+    const postEl = document.createElement("div");
+    postEl.classList.add("newsfeed__post");
+
+    // newsfeedを格納
     const post = bacefook.newsfeed[index];
 
+    // 投稿者名を追加
     const friendEl = document.createElement("div");
-    friendEl.className = "friend";
+    friendEl.classList.add("newsfeed__friend");
     friendEl.innerText = post.friend;
-
-    const postEl = document.createElement("div");
-    postEl.innerText = post.text;
     postEl.append(friendEl);
 
-    // 追加(start)
-
-    // ユーザー名を追加
-    const usernameEl = document.querySelector(".left-sidebar__username");
-    usernameEl.innerHTML = "コードネーム：" + localStorage.username;
-
-    // タイムスタンプを追加
+    // タイムスタンプ（投稿日時）を追加
     const timestampEl = document.createElement("div");
+    timestampEl.classList.add("newsfeed__posted-date")
     let createTime = "posted " + moment(bacefook.newsfeed[index]["timestamp"]).startOf("h:mm:ss").fromNow(); // "posted 5 hours ago"
     timestampEl.innerHTML = createTime;
     postEl.append(timestampEl);
- 
+    
     // 気持ちを追加
     const feelingEl = document.createElement("div");
+    feelingEl.classList.add("newsfeed__feeling");
     feelingEl.innerHTML = bacefook.newsfeed[index]["feeling"];
     postEl.append(feelingEl);
-
-    // 画像を追加
+    
+    // プロフィール画像を追加
     const imageEl = document.createElement("img");
+    imageEl.classList.add("newsfeed__profile-image");
     imageEl.src = bacefook.newsfeed[index]["image"];
-    imageEl.width = 50;
-    imageEl.height = 50;
+    imageEl.alt = "mafiaの画像です";
     postEl.append(imageEl);
 
-    // 追加(end)
+    // 投稿メッセージを追加
+    const postmessageEl = document.createElement("div");
+    postmessageEl.classList.add("newsfeed__message")
+    postmessageEl.innerText = post.text;
+    postEl.append(postmessageEl);
+
+    // 投稿
     containerEl.append(postEl);
   }
+
+  // ユーザー名を追加
+  const usernameEl = document.querySelector(".left-sidebar__username");
+  usernameEl.innerHTML = "コードネーム：" + localStorage.username;
 });
 
-
-// 追加 (start)
+// ロード完了後にnewsfeedを監視
 window.onload = function() {
 
 // 投稿作成時に新しい投稿を自動的に表示する
@@ -74,40 +83,51 @@ function watchArray(arr, func) {
 watchArray(bacefook.newsfeed, function() {
   const containerEl = document.querySelector("#newsfeed");
 
+  // 投稿のフレームを作成
+  const postEl = document.createElement("div");
+  postEl.classList.add("newsfeed__post");
+
+  // newsfeedを格納
   let lastIndex = bacefook.newsfeed.length-1;
   const post = bacefook.newsfeed[lastIndex];
 
+  // 投稿者名を追加
   const friendEl = document.createElement("div");
-  friendEl.className = "friend";
+  friendEl.classList.add("newsfeed__friend");
   friendEl.innerText = post.friend;
-
-  const postEl = document.createElement("div");
-  postEl.innerText = post.text;
   postEl.append(friendEl);
 
-  // タイムスタンプを追加
+  // タイムスタンプ（投稿日時）を追加
   const timestampEl = document.createElement("div");
+  timestampEl.classList.add("newsfeed__posted-date")
   let createTime = "posted " + moment(bacefook.newsfeed[lastIndex]["timestamp"]).startOf("h:mm:ss").fromNow(); // "posted 5 hours ago"
   timestampEl.innerHTML = createTime;
   postEl.append(timestampEl);
-
+  
   // 気持ちを追加
   const feelingEl = document.createElement("div");
+  feelingEl.classList.add("newsfeed__feeling");
   feelingEl.innerHTML = bacefook.newsfeed[lastIndex]["feeling"];
   postEl.append(feelingEl);
-
-  // 画像を追加
-  const imageEl = document.createElement("img");
-  imageEl.src = bacefook.newsfeed[lastIndex]["image"];
-  imageEl.width = 50;
-  imageEl.height = 50;
-  postEl.append(imageEl);
   
+  // プロフィール画像を追加
+  const imageEl = document.createElement("img");
+  imageEl.classList.add("newsfeed__profile-image");
+  imageEl.src = bacefook.newsfeed[lastIndex]["image"];
+  imageEl.alt = "mafiaの画像です";
+  postEl.append(imageEl);
+
+  // 投稿メッセージを追加
+  const postmessageEl = document.createElement("div");
+  postmessageEl.classList.add("newsfeed__message")
+  postmessageEl.innerText = post.text;
+  postEl.append(postmessageEl);
+
+  // 投稿
   containerEl.prepend(postEl);
 
 });
 }
-// 追加 (end)
 
 
 
