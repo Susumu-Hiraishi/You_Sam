@@ -49,8 +49,16 @@ ul {
     padding: 0;
 }
 
-#newsfeed {
+.new-post {
+    height: 200px;
+}
+
+.postflame {
     padding: 0 70px;
+}
+
+#newsfeed {
+    padding-top: 20px;
 }
 
 .newsfeed__post {
