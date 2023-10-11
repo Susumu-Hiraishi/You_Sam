@@ -21,9 +21,10 @@ body {
     float: left;
 }
 
-#hero__newpost-btn {
-    float: right;
+.newsfeed__post-btn {
+    position: absolute;
     padding: 5px;
+    top: 100;
     margin-top: 10px; /* あとで修正  */
     margin-right: 10px; /* あとで修正  */
     background: #039632;
@@ -49,7 +50,8 @@ ul {
     padding: 0;
 }
 
-.new-post {
+#newpost {
+    position: relative;
     height: 200px;
 }
 
@@ -57,8 +59,12 @@ ul {
     padding: 0 70px;
 }
 
+#newpostflame {    
+    background: rgba(255,255,255,.6);
+}
+
 #newsfeed {
-    padding-top: 20px;
+    padding-top: 60px;
 }
 
 .newsfeed__post {
@@ -68,7 +74,6 @@ ul {
     height: 200px;
     width: 400px;
     margin-bottom: 10px;
-    text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0,.5);
     border-radius: 3px;
 }
@@ -100,6 +105,7 @@ ul {
     position: absolute;
     top: 70px;
     left: 20px;
+    width: 90%;
 }
 
 .newsfeed__feeling {

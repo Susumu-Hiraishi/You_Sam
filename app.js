@@ -69,11 +69,11 @@ window.addEventListener("load", () => {
     friendlistEl.append(friendNameEl);
   });
 
-  // 新しい投稿を作成
-  const newpostBtn = document.querySelector("#hero__newpost-btn");
-  newpostBtn.addEventListener("click", function() {
-  window.prompt("create new post");
-  });
+  // // 新しい投稿を作成
+  // const newpostBtn = document.querySelector("#hero__newpost-btn");
+  // newpostBtn.addEventListener("click", function() {
+  // window.prompt("create new post");
+  // });
 
 });
 
@@ -141,7 +141,7 @@ watchArray(bacefook.newsfeed, function() {
   postEl.append(postmessageEl);
 
   // 投稿
-  containerEl.prepend(postEl);
+  // containerEl.prepend(postEl);
 
 });
 }

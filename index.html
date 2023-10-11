@@ -12,7 +12,7 @@
   <body>
     <div class="hero">
       <h1 class="hero__text">Mafiagram</h1>
-      <button id="hero__newpost-btn" type="button">new post</button>
+      <!-- <button id="hero__newpost-btn" type="button">new post</button> -->
     </div>
     <main>
       <div class="left-sidebar">
@@ -25,7 +25,17 @@
         </ul>
       </div>
       <div class="postflame">
-        <div class="new-post"></div>
+        <div id="newpost">
+          <h2>New Post</h2>
+          <div class="newsfeed__post" id="newpostflame">
+            <div class="newsfeed__friend">test</div>
+            <img class="newsfeed__profile-image" src="images/mafia-new-user.jpeg" alt="mafiaの画像です">
+            <form action="#" method="post">
+              <p><textarea class="newsfeed__message" name="comment" placeholder="その気持ちをつぶやこう" id="" cols="30" rows="5"></textarea></p>
+              <p><input class="newsfeed__post-btn" type="submit" value="つぶやく"></p>
+            </form>
+          </div>
+        </div>
         <div id="newsfeed"></div>
       </div>
       <div class="right-sidebar">
